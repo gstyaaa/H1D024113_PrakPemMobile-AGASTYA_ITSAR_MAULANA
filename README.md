@@ -31,6 +31,16 @@ Aplikasi Android **Jualan** dibuat menggunakan Kotlin dan Jetpack Compose. Aplik
   - **`BasicInfoScreen`**: Halaman informasi tentang platform Jualan.
   - **`HubungiKamiScreen`**: Halaman formulir kontak/pesan dengan validasi input dan umpan balik snackbar.
 
+### Pertemuan 3: Dynamic Lists with Lazy Layouts
+- Pembuatan Data Class `Category` dan `Product` untuk menstrukturkan data produk UMKM.
+- Penyediaan data dummy lokal sebanyak 15 produk dalam 3 kategori (Makanan, Minuman, Kerajinan) menggunakan singleton `DummyData`.
+- Implementasi kartu produk kustom (`ProductItemCard`) dengan gambar rasio 1:1, badge kategori, nama, harga, dan stok.
+- Penggunaan **`LazyRow`** untuk daftar chip kategori produk secara horizontal yang dapat difilter dinamis.
+- Penggunaan **`LazyVerticalGrid`** (2 kolom) untuk menampilkan daftar produk secara efisien dan responsif.
+- Interaktivitas pesan notifikasi `Toast` saat setiap kartu produk diklik.
+- Pembuatan `HomeActivity` sebagai pintu masuk utama (*Launcher Activity*) aplikasi.
+- Pratinjau antarmuka `@Preview` dengan dukungan tema terang (*Light Mode*) dan tema gelap (*Dark Mode*).
+
 ---
 
 ## Dokumentasi Tampilan
@@ -46,5 +56,23 @@ Aplikasi Android **Jualan** dibuat menggunakan Kotlin dan Jetpack Compose. Aplik
 <p align="center">
   <img src="demo_pertemuan_2.gif" alt="Demo Pertemuan 2 Material Design" width="320" />
 </p>
+
+### 3. Tampilan Aplikasi Pertemuan 3 (Dynamic Lists with Lazy Layouts)
+
+#### Kategori Makanan (Mode Gelap)
+<p align="center">
+  <img src="Screenshot_20260914_124047.png" alt="Tampilan Kategori Makanan Mode Gelap" width="320" />
+</p>
+
+#### Kategori Minuman (Mode Terang)
+<p align="center">
+  <img src="Screenshot_20260914_125333.png" alt="Tampilan Kategori Minuman Mode Terang" width="320" />
+</p>
+
+#### Kategori Kerajinan (Mode Terang)
+<p align="center">
+  <img src="Screenshot_20260914_125401.png" alt="Tampilan Kategori Kerajinan Mode Terang" width="320" />
+</p>
+
 
 
