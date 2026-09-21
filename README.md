@@ -41,6 +41,27 @@ Aplikasi Android **Jualan** dibuat menggunakan Kotlin dan Jetpack Compose. Aplik
 - Pembuatan `HomeActivity` sebagai pintu masuk utama (*Launcher Activity*) aplikasi.
 - Pratinjau antarmuka `@Preview` dengan dukungan tema terang (*Light Mode*) dan tema gelap (*Dark Mode*).
 
+### Pertemuan 4: Recomposition dan UI Lifecycle
+- **State Hoisting & UDF**: Memisahkan komponen Stateful (`HubungiKamiScreen`, `DaftarProdukScreen`, `DetailProductScreen`) dan Stateless (`StatelessFormHubungiKami`, `StatelessDaftarProduct`, `StatelessDetailProduct`).
+- **Pengelolaan State**: Menggunakan `remember` dan `rememberSaveable` untuk mempertahankan data formulir dan filter saat terjadi perubahan konfigurasi (*configuration change*).
+- **Form Interaktif & Validasi Kompleks**:
+  - Kolom input email dengan validasi karakter `@` dan pesan kesalahan pendukung (*supporting text*).
+  - Kolom pesan dengan validasi panjang teks minimal 10 karakter.
+  - Dropdown tipe pesan interaktif menggunakan `ExposedDropdownMenuBox`.
+  - Integrasi pemilihan berkas galeri menggunakan `rememberLauncherForActivityResult` (`PickVisualMedia`) dan penampil status file terpilih.
+  - Checkbox persetujuan syarat dan ketentuan.
+  - Tombol submit yang aktif/nonaktif secara reaktif berdasarkan status validasi formulir dan menampilkan `Snackbar`.
+- **Fitur Pencarian & Simulasi Asinkronus**:
+  - Kolom pencarian produk terintegrasi dengan filter kategori produk.
+  - Simulasi jeda pengambilan data dari internet menggunakan `LaunchedEffect` dan `delay(1000)` disertai indikator pemuatan `CircularProgressIndicator`.
+- **Layar Detail Produk**:
+  - Halaman detail dinamis berdasarkan ID produk.
+  - Kontrol jumlah kuantitas beli (`-` dan `+`) yang dibatasi stok produk yang tersedia.
+  - Notifikasi umpan balik `Toast` saat menambahkan produk ke keranjang belanja.
+- **Navigasi Antarhalaman Terpadu**:
+  - Konfigurasi `NavHost` pada `HomeActivity` menghubungkan halaman daftar produk, detail produk dengan argumen integer, dan halaman formulir kontak.
+  - Penambahan menu aksi `MoreVert` pada `TopAppBar` untuk navigasi cepat ke halaman hubungi kami.
+
 ---
 
 ## Dokumentasi Tampilan
@@ -74,5 +95,8 @@ Aplikasi Android **Jualan** dibuat menggunakan Kotlin dan Jetpack Compose. Aplik
   <img src="Screenshot_20260914_125401.png" alt="Tampilan Kategori Kerajinan Mode Terang" width="320" />
 </p>
 
+### 4. Demo Aplikasi Pertemuan 4 (Recomposition dan UI Lifecycle)
 
-
+<p align="center">
+  <img src="demo_pertemuan_4.gif" alt="Demo Pertemuan 4 Recomposition dan UI Lifecycle" width="320" />
+</p>
